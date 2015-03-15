@@ -1,12 +1,67 @@
-*.class
+# Csharp -------------------------------------------
+ 
+# Projects/Solutions
+*.suo
+ 
+# Build
+[Dd]ebug/
+[Rr]elease/
+x64/
+build/
+[Bb]in/
+[Oo]bj/
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# MSTest
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+ 
 
-# Package Files #
+# Cplusplus  ----------------------------------------------
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+# Executables
+*.exe
+*.out
+*.app
+
+# Java ----------------------------------------------
+
+*target*
 *.jar
 *.war
 *.ear
+*.class
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+# Projects
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+
+# Pydev  --------------------------------------------
+
+*.pydevproject
