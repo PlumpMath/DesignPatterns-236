@@ -1,0 +1,12 @@
+The Singleton design pattern is used to ensure that only one instance of a class exists within an application. 
+A Singleton can be used when you desire the following three things:
+1) Only one instantiation of the class to be shared between all clients.
+2) Global access to the class.
+3) The ability to store and maintain 'state' within the class.
+
+A static class can be used instead of a Singleton when you only need to meet points 1 and 2 from above and your
+class is stateless. The Singleton is often considered to be an Anti-pattern because it introduces global state (which
+is something developers try to avoid).
+
+An alternative to the Singleton that I often prefer is to use Dependency Injection and an IoC container. This gives you
+finer control over the lifecycle of the class without introducing global state. You also get the full benefits of DI. 

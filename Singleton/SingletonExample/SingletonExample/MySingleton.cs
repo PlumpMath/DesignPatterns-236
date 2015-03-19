@@ -15,7 +15,7 @@ namespace SingletonExample
     /// </summary>
     public sealed class MySingleton
     {
-        private static MySingleton instance;
+        private static MySingleton instance = new MySingleton();
 
         /// <summary>
         /// Retreives the instance of <see cref="MySingleton"/>
@@ -24,28 +24,31 @@ namespace SingletonExample
         {
             get 
             {
-                if (instance == null)
-                {
-                    instance = new MySingleton();
-                }
-
                 return instance;
             } 
         }
+
+        /// <summary>
+        /// Enforces that 'instance' won't be initialized until the static class is used
+        /// </summary>
+        static MySingleton() { }
 
         /// <summary>
         /// Since there is a private constructor, no public default constructor is created
         /// and there is no way to constuct an instance of the singleton from another class.
         /// This ensures only 1 instance of the singleton exists.
         /// </summary>
-        private MySingleton() { }
+        private MySingleton() 
+        {
+
+        }
 
         /// <summary>
         /// Example instance method of the singleton
         /// </summary>
         public void ExampleMethod()
         {
-
+            // Since this can easily be called from multiple threads, this should be thread safe.
         }
 
     }
